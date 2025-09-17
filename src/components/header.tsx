@@ -13,6 +13,8 @@ const menuItems = [
   { name: "Templates", href: "#templates" },
   { name: "Pricing", href: "#pricing" },
   { name: "Docs", href: "/docs" },
+  { name: "Dashboard", href: "/app" },
+  { name: "Playground", href: "/app/playground" },
 ];
 
 export const HeroHeader = () => {
@@ -91,12 +93,12 @@ export const HeroHeader = () => {
               </div>
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
                 <Button asChild variant="outline" size="sm">
-                  <Link href="/auth">
+                  <Link href="/login">
                     <span>Sign In</span>
                   </Link>
                 </Button>
                 <Button asChild size="sm">
-                  <Link href="/auth">
+                  <Link href="/register">
                     <span>Start Free</span>
                   </Link>
                 </Button>
