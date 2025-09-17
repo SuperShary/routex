@@ -1,6 +1,6 @@
 "use client";
 import * as React from "react";
-import { Panel, PanelGroup, PanelResizeHandle } from "@/components/ui/resizable";
+import { ResizablePanel, ResizablePanelGroup, ResizableHandle } from "@/components/ui/resizable";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -45,8 +45,8 @@ export const PlaygroundShell: React.FC = () => {
         />
       </div>
 
-      <PanelGroup direction="horizontal" className="rounded-2xl border bg-card/50 p-2">
-        <Panel defaultSize={32} minSize={24} className="p-2">
+      <ResizablePanelGroup direction="horizontal" className="rounded-2xl border bg-card/50 p-2">
+        <ResizablePanel defaultSize={32} minSize={24} className="p-2">
           <Card className="h-full p-3">
             <div className="mb-3 flex items-center justify-between">
               <h3 className="text-sm font-semibold">TaskSpec</h3>
@@ -58,7 +58,7 @@ export const PlaygroundShell: React.FC = () => {
                 <TabsTrigger value="form">Form</TabsTrigger>
               </TabsList>
               <TabsContent value="json" className="mt-3 h-[calc(100%-3rem)]">
-                <Textarea className="h-full font-mono" placeholder="{\n  \"family\": \"write\",\n  ...\n}" />
+                <Textarea className="h-full font-mono" placeholder={`{\n  "family": "write",\n  ...\n}`} />
               </TabsContent>
               <TabsContent value="form" className="mt-3 space-y-3">
                 <Input placeholder="Goal" />
@@ -67,9 +67,9 @@ export const PlaygroundShell: React.FC = () => {
               </TabsContent>
             </Tabs>
           </Card>
-        </Panel>
-        <PanelResizeHandle className="w-2" />
-        <Panel defaultSize={36} minSize={28} className="p-2">
+        </ResizablePanel>
+        <ResizableHandle className="w-2" />
+        <ResizablePanel defaultSize={36} minSize={28} className="p-2">
           <Card className="h-full p-3">
             <div className="mb-3 flex items-center justify-between">
               <h3 className="text-sm font-semibold">Prompt Bundle</h3>
@@ -85,9 +85,9 @@ export const PlaygroundShell: React.FC = () => {
               <Textarea placeholder="User message" className="min-h-24" />
             </div>
           </Card>
-        </Panel>
-        <PanelResizeHandle className="w-2" />
-        <Panel defaultSize={32} minSize={24} className="p-2">
+        </ResizablePanel>
+        <ResizableHandle className="w-2" />
+        <ResizablePanel defaultSize={32} minSize={24} className="p-2">
           <Card className="h-full p-3">
             <div className="mb-3 flex items-center justify-between">
               <h3 className="text-sm font-semibold">Model Selector</h3>
@@ -105,8 +105,8 @@ export const PlaygroundShell: React.FC = () => {
               ))}
             </div>
           </Card>
-        </Panel>
-      </PanelGroup>
+        </ResizablePanel>
+      </ResizablePanelGroup>
 
       <div className="mt-3 rounded-2xl border bg-card/50 p-3">
         <div className="mb-2 flex items-center gap-2">
