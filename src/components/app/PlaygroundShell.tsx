@@ -35,6 +35,16 @@ export const PlaygroundShell: React.FC = () => {
 
   return (
     <div className="h-[calc(100vh-6rem)]">
+      {/* Playground banner */}
+      <div className="mb-3 overflow-hidden rounded-2xl border bg-card/50">
+        <img
+          src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/5ab920c5-877f-4dfc-980f-3d02ee66e478/generated_images/high-fidelity-dark-ui-banner-for-an-ai-p-d64c9909-20250917104505.jpg?"
+          alt="RouteX Playground banner illustration"
+          className="h-40 w-full object-cover sm:h-48 md:h-56"
+          loading="lazy"
+        />
+      </div>
+
       <PanelGroup direction="horizontal" className="rounded-2xl border bg-card/50 p-2">
         <Panel defaultSize={32} minSize={24} className="p-2">
           <Card className="h-full p-3">
